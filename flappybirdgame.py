@@ -129,7 +129,7 @@ while not crashed:
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_SPACE and game_active:
                 bird_movement = 0
-                bird_movement -= 10
+                bird_movement -= 7 # Reduced jump height for more control
                 flap_sound.play()
             if event.key == pygame.K_SPACE and game_active == False:
                 game_active = True
@@ -179,7 +179,7 @@ while not crashed:
     floor_x_pos -= 1
     floorSetting()
     if floor_x_pos <= -576:
-	    floor_x_pos = 0
+        floor_x_pos = 0
         
     pygame.display.update()
     clock.tick(60)
